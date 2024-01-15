@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.view.AllCustomerViewController">
+    <children>
+        <TableView fx:id="customerTable" layoutX="36.0" layoutY="106.0" prefHeight="537.0" prefWidth="527.0">
+            <columns>
+                <TableColumn fx:id="customerIdColumn" prefWidth="150.0" text="Customer ID" />
+                <TableColumn fx:id="fullNameColumn" prefWidth="150.0" text="Full Name" />
+            <TableColumn fx:id="balanceColumn" prefWidth="75.0" text="Balance" />
+            <TableColumn fx:id="totalBillsColumn" prefWidth="75.0" text="Total Bills" />
+            <TableColumn fx:id="unpaidBillsColumn" prefWidth="75.0" text="Unpaid Bills" />
+            </columns>
+        </TableView>
+        <TextField fx:id="givenCustomerId" layoutX="36.0" layoutY="65.0" promptText="Filter by customer ID" />
+        <Button layoutX="745.0" layoutY="661.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+        <TextField fx:id="sumGiven" layoutX="224.0" layoutY="65.0" prefHeight="25.0" prefWidth="92.0" promptText="Filter by sum" />
+        <ChoiceBox fx:id="sumChoiceBox" layoutX="332.0" layoutY="65.0" prefHeight="25.0" prefWidth="92.0" />
+      <Button layoutX="511.0" layoutY="32.0" mnemonicParsing="false" onAction="#onFilterClick" prefHeight="25.0" prefWidth="52.0" text="Filter" />
+      <Button layoutX="511.0" layoutY="65.0" mnemonicParsing="false" onAction="#onResetClick" prefHeight="25.0" prefWidth="52.0" text="Reset" />
+      <RadioButton fx:id="sumRadio" layoutX="36.0" layoutY="14.0" mnemonicParsing="false" text="Sum">
+         <toggleGroup>
+            <ToggleGroup fx:id="customerToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="idRadio" layoutX="36.0" layoutY="36.0" mnemonicParsing="false" text="ID" toggleGroup="$customerToggle" />
+      <Text fx:id="customerMessage" layoutX="36.0" layoutY="661.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="527.0" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.view.ElectricianAuthViewController">
+   <children>
+      <Text layoutX="182.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter daily password ">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField fx:id="passwordInput" layoutX="226.0" layoutY="188.0" />
+      <Button layoutX="226.0" layoutY="253.0" mnemonicParsing="false" onAction="#onConfirmButtonClick" text="Confirm" />
+      <Button layoutX="334.0" layoutY="253.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+      <Text fx:id="errorMessage" layoutX="226.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="206.0" />
+   </children>
+</AnchorPane>

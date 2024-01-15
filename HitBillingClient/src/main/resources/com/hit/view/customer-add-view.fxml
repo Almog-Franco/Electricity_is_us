@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.hit.view.CustomerAddController">
+    <children>
+      <Text layoutX="101.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter the customer ID and full name">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+        <TextField fx:id="customerAddId" layoutX="226.0" layoutY="150.0" promptText="ID" />
+        <TextField fx:id="customerAddName" layoutX="226.0" layoutY="200.0" promptText="Full Name" />
+        <Button layoutX="254.0" layoutY="343.0" mnemonicParsing="false" onAction="#onAddCustomerClick" text="Add Customer" />
+        <Button layoutX="534.0" layoutY="355.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back" />
+      <Text fx:id="customerMessage" layoutX="226.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+    </children>
+</AnchorPane>

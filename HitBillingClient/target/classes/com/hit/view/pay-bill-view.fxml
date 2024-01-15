@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="526.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hit.view.PayBillController">
+   <children>
+      <Text layoutX="131.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please enter credit card details below" wrappingWidth="338.13671875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit card number">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Holder name">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CVV">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <TextField layoutX="201.0" layoutY="357.0" prefHeight="25.0" prefWidth="314.0" promptText="Enter holder name here" />
+      <TextField fx:id="creditCardNumber" layoutX="201.0" layoutY="325.0" prefHeight="25.0" prefWidth="314.0" promptText="Enter 16 digit number here" />
+      <TextField layoutX="201.0" layoutY="396.0" prefHeight="25.0" prefWidth="95.0" promptText="Enter CVV here" />
+      <Text layoutX="14.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expiration date">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="monthChoiceBox" layoutX="201.0" layoutY="438.0" prefHeight="25.0" prefWidth="63.0" />
+      <Text layoutX="271.0" layoutY="457.0" strokeType="OUTSIDE" strokeWidth="0.0" text="/">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <ChoiceBox fx:id="yearChoiceBox" layoutX="288.0" layoutY="437.0" prefHeight="25.0" prefWidth="63.0" />
+      <Button layoutX="431.0" layoutY="480.0" mnemonicParsing="false" onAction="#payNowButtonClick" text="Pay Now">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="534.0" layoutY="480.0" mnemonicParsing="false" onAction="#onBackButtonClick" text="Back">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Text layoutX="236.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bill Information">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="16.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bill ID">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="15.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text layoutX="21.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sum">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="billIdTextPayMenu" layoutX="232.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="billDate" layoutX="232.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Text fx:id="sumTextPayMenu" layoutX="232.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N/A">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Text>
+      <Label fx:id="customerMessage" layoutX="18.0" layoutY="491.0" text="Click Pay now to finish the process">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
